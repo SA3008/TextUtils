@@ -33,13 +33,15 @@ function App() {
     if(mode === 'light'){
       setMode('dark');
       console.log('inside if')
-      document.body.style.backgroundColor = "gray";
+      document.body.style.backgroundColor = "#383838";
+      document.getElementById('textArea').style.backgroundColor = '#383838'
       showAlert("Dark mode enabled","success")
     }
     else{
       setMode('light');
       console.log("inside else")
       document.body.style.backgroundColor = "white";
+      document.getElementById('textArea').style.backgroundColor = 'white';
       showAlert("Light mode enabled","success")
     }
  }
@@ -84,7 +86,7 @@ function App() {
     <div>
         <Navbar title="TextUtils" home="Home-Page" about="About Us" search="Find" mode={mode} toggleMode={toggleMode} color={color} handleAnyColorMode={handleAnyColorMode}/>
         <Alert alert={alert}/>
-        <TextForm heading="Enter you text here to Analyse." mode={mode} showAlert={showAlert} />
+        <TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove extra spaces" mode={mode} showAlert={showAlert} />
     </div>
               {/* {  <Router>
               <Navbar title="TextUtils" home="Home-Page" about="About Us" search="Find" mode={mode} toggleMode={toggleMode} color={color} handleAnyColorMode={handleAnyColorMode} colorTextArea={colorTextArea} colorAbout={colorAbout} />
